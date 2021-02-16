@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class FoodConfig {
+public class NotificadorConfig {
 
 
     @Bean
@@ -18,10 +18,5 @@ public class FoodConfig {
     }
 
 
-    @Bean
-    public AtivacaoClienteService ativacaoClienteService(){
-        AtivacaoClienteService ativacaoClienteService = new AtivacaoClienteService(notificadorEmail() );
 
-        return ativacaoClienteService;
-    }
 }
