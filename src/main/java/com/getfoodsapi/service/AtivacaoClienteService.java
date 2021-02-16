@@ -2,10 +2,8 @@ package com.getfoodsapi.service;
 
 import com.getfoodsapi.modelos.Cliente;
 import com.getfoodsapi.notificacao.Notificador;
-import com.getfoodsapi.notificacao.NotificadorEmail;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component tirei pra colocar direto no configuration
 public class AtivacaoClienteService {
     private Notificador notificador;
 

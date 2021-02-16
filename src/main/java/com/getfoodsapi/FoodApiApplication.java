@@ -13,10 +13,10 @@ public class FoodApiApplication {
     public static void main(String[] args) {
 	SpringApplication.run(FoodApiApplication.class, args);
 
-	Cliente wil = new Cliente("WIlliam", "wil_ff@gotm.com", "999499499");
-NotificadorEmail notificador = new NotificadorEmail();
-	AtivacaoClienteService ativaCliente = new AtivacaoClienteService(notificador);
-	ativaCliente.Ativar(wil);
+	//Cliente wil = new Cliente("WIlliam", "wil_ff@gotm.com", "999499499");
+    //NotificadorEmail notificador = new NotificadorEmail("smt");
+	//AtivacaoClienteService ativaCliente = new AtivacaoClienteService(notificador);
+	//ativaCliente.Ativar(wil);
 
     }
 }

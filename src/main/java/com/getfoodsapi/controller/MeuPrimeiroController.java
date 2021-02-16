@@ -21,6 +21,6 @@ public class MeuPrimeiroController {
 
         ativacaoClientService.Ativar(joao);
 
-        return "HELLLO";
+        return joao.toString();
     }
 }
