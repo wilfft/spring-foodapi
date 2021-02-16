@@ -1,27 +1,13 @@
 package com.getfoodsapi.notificacao;
 
 import com.getfoodsapi.modelos.Cliente;
+import org.springframework.stereotype.Component;
 
+//@Component
 public class NotificadorEmail implements Notificador {
 
-    private boolean caixaAlta;
-    private String servidorSmtp;
-
-    public void setCaixaAlta(boolean caixaAlta) {
-	this.caixaAlta = caixaAlta;
-    }
-
-    public NotificadorEmail(String servidorSmtp) {
-	this.servidorSmtp = servidorSmtp;
-	System.out.println("[NotificadorEmail]" + servidorSmtp);
-    }
-
+    @Override
     public void notificar(Cliente cliente, String mensagem) {
-	if (caixaAlta) {
-	    mensagem = mensagem.toUpperCase();
-	}
-	System.out.println("Cliente " + cliente.getNome() + " foi notificado por email:   " + mensagem
-		+ " via servidor:  " + servidorSmtp);
+	System.out.println(cliente.getNome() + " foi notificado com a mensagem: " + mensagem);
     }
-
 }

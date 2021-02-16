@@ -1,20 +1,27 @@
 package com.getfoodsapi.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.getfoodsapi.modelos.Cliente;
 import com.getfoodsapi.notificacao.Notificador;
 
-//@Component tirei pra colocar direto no configuration
+@Component
 public class AtivacaoClienteService {
-    private Notificador notificador;
 
-    public AtivacaoClienteService(Notificador notificador) {
-        this.notificador = notificador;
-    }
+@Autowired
+    private    Notificador notificador;
+
 
     public void Ativar(Cliente cliente) {
-        cliente.ativar();
-       notificador.notificar(cliente, cliente.getEmail() + "  foi notificado via ativaçao cliente.  " + cliente.toString());
+	cliente.ativar();
+	if (notificador != null) {
+		notificador.notificar(cliente,
+				cliente.getEmail() + "  foi notificado via ativaçao cliente.  " + cliente.toString());
 
+	} else {
 
+		System.out.println("Cliente nao notificado ");
+	}
     }
 }

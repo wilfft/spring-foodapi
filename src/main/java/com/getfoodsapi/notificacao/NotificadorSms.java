@@ -1,9 +1,8 @@
 package com.getfoodsapi.notificacao;
 
-
 import org.springframework.stereotype.Component;
 
-
+@Component
 public class NotificadorSms implements Notificador {
 
     @Override
