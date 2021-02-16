@@ -1,5 +1,5 @@
 package com.getfoodsapi;
-
+/*
 import com.getfoodsapi.notificacao.NotificadorEmail;
 import com.getfoodsapi.service.AtivacaoClienteService;
 import org.springframework.context.annotation.Bean;
@@ -20,3 +20,4 @@ public class NotificadorConfig {
 
 
 }
+*/
