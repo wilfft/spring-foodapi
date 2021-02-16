@@ -1,11 +1,12 @@
 package com.getfoodsapi.notificacao;
 
+import com.getfoodsapi.NivelDeUrgencia;
+import com.getfoodsapi.TipoDeNotificador;
 import com.getfoodsapi.modelos.Cliente;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Qualifier("normal")
+
+@TipoDeNotificador(NivelDeUrgencia.NORMAL)
 @Component
 public class NotificadorEmail implements Notificador {
 

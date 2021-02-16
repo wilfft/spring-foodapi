@@ -1,10 +1,11 @@
 package com.getfoodsapi.notificacao;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.getfoodsapi.NivelDeUrgencia;
+import com.getfoodsapi.TipoDeNotificador;
 import org.springframework.stereotype.Component;
 
 
-@Qualifier("urgente")
+@TipoDeNotificador(NivelDeUrgencia.URGENTE)
 @Component
 public class NotificadorSms implements Notificador {
 

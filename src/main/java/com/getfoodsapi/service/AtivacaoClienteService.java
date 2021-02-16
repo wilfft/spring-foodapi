@@ -1,7 +1,8 @@
 package com.getfoodsapi.service;
 
+import com.getfoodsapi.NivelDeUrgencia;
+import com.getfoodsapi.TipoDeNotificador;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.getfoodsapi.modelos.Cliente;
@@ -10,7 +11,8 @@ import com.getfoodsapi.notificacao.Notificador;
 @Component
 public class AtivacaoClienteService {
 
-    @Qualifier("urgente")
+
+	@TipoDeNotificador(NivelDeUrgencia.URGENTE)
     @Autowired
     private Notificador notificador;
 
