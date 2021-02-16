@@ -17,7 +17,7 @@ public class MeuPrimeiroController {
     @GetMapping("/hello")
     @ResponseBody
     public String hello() {
-        Cliente joao = new Cliente("joao", "92039213", "92039023");
+        Cliente joao = new Cliente("joao", "wil_Ff@hotmail.com", "92039023");
 
         ativacaoClientService.Ativar(joao);
 
